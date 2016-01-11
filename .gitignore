@@ -13,3 +13,5 @@ src/public/css/*.css
 .git
 .svn
 npm-debug.log
+.jscsrc
+.jshintrc

@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,15 @@
   "homepage": "https://github.com/bryanvargas/libreria_nodejs#readme",
   "dependencies": {
     "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jshint": "^2.0.0",
+    "gulp-nodemon": "^2.0.6",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "wiredep": "^3.0.0"
   }
 }
