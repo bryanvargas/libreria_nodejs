@@ -1,0 +1,20 @@
+{
+  "name": "libreria",
+  "version": "1.0.0",
+  "description": "Desarrollo de una aplicacion utilizando NodeJS y Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bryanvargas/libreria_nodejs.git"
+  },
+  "author": "Bryan Vargas <bryanprsvar@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/bryanvargas/libreria_nodejs#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

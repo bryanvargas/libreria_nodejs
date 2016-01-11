@@ -1,0 +1,22 @@
+{
+  "name": "libreria",
+  "description": "Desarrollo de una aplicacion utilizando NodeJS y Express",
+  "main": "app.js",
+  "authors": [
+    "Bryan Vargas <bryanprsvar@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}

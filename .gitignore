@@ -1,0 +1,15 @@
+node_modules/
+public/components
+.sass-cache
+app.set("view engine", "jade");
+.DS_Store
+git-info.txt
+logs/*.log
+node_modules
+npm-debug.log
+src/public/bower_components
+src/public/css/**/*.css
+src/public/css/*.css
+.git
+.svn
+npm-debug.log
