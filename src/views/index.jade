@@ -1,0 +1,43 @@
+-var list = [1, 2, 3, 4]
+html
+	head
+		title Mi Aplicacion usando Node.js y Express.js
+		
+		//- bower:css
+		link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/lib/font-awesome/css/font-awesome.min.css')
+		//- endbower
+		
+		//- bower:js
+		script(src='/lib/jquery/dist/jquery.js')
+		script(src='/lib/bootstrap/dist/js/bootstrap.js')
+		//- endbower
+		
+		//- inject:css
+		link(rel="stylesheet", href="/css/styles.css")
+		//- endinject
+		
+		//- inject:js
+		script(src="/js/app.js")
+		//- endinject
+		
+	body.myClass
+		h1#MyId Mi Aplicacion usando Node.js y Express.js
+		
+		p
+			h3 Sub cabecera
+			
+		ul
+			each val in ['1', '2', '3', '4']
+				li= val
+		hr
+		
+		ul	 
+			each val in list
+				li= val 
+				
+		hr
+		
+		ul 
+			each val in listDos
+				li= val
