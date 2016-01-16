@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Storystrap Template</title>
+		<title><%=title%></title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 				
@@ -33,7 +33,7 @@
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
   <div class="container">
-    <div class="navbar-header">
+    <div class="navbar-header">r
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -44,8 +44,8 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
     	<ul class="nav navbar-nav">
-    		<% for(var i=0; i<listDos.length;i++){%>
-    			<li><a href="# "><%=listDos[i]%></a></li>
+    		<% for(var i=0; i<nav.length;i++){%>
+    			<li><a href="<%=nav[i].link%>"><%=nav[i].text%></a></li>
     		<%}%>
     	</ul>
       <ul class="nav navbar-right navbar-nav">
@@ -66,7 +66,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1>Storystrap
+        <h1><%=title%>
           <p class="lead"></p>
         </h1>
       </div>
