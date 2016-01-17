@@ -19,7 +19,7 @@ var nav =
 
 //aunque paresca confuso, require se convirte en una funcion en donde (nav) vendria siendo el parametro 
 var libroRouter = require('./src/routes/bookRoutes')(nav);
-
+var adminRouter = require('./src/routes/adminRoutest')(nav);
 
 app.use(express.static('public'));
 //app.use(express.static('src/views'));
@@ -49,6 +49,7 @@ app.get('/', function(req, res) {
 
 
 app.use('/Books', libroRouter);
+app.use('/Admin', adminRouter);
 
 //refactorizacion utilizando preprosesador JADE
 app.get('/', function (req, res) {
