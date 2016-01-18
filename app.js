@@ -1,6 +1,12 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var passport = require('passport');
+var session = require('express-session');
 
 var app = express();
+
+
 
 //var port = 3030;
 var port = process.env.PORT || 5000;
@@ -20,8 +26,18 @@ var nav =
 //aunque paresca confuso, require se convirte en una funcion en donde (nav) vendria siendo el parametro 
 var libroRouter = require('./src/routes/bookRoutes')(nav);
 var adminRouter = require('./src/routes/adminRoutest')(nav);
+var authRouter = require('./src/routes/authRouter')(nav);
 
 app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+app.use(cookieParser());
+app.use(session({secret: 'library'}));
+
+require('./src/config/passport')(app);
+
+
+
 //app.use(express.static('src/views'));
 
 app.set('views', './src/views');
@@ -50,6 +66,7 @@ app.get('/', function(req, res) {
 
 app.use('/Books', libroRouter);
 app.use('/Admin', adminRouter);
+app.use('/Auth', authRouter);
 
 //refactorizacion utilizando preprosesador JADE
 app.get('/', function (req, res) {

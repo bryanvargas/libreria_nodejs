@@ -7,8 +7,13 @@ var mongodb = require('mongodb').MongoClient;
 var objectId = require('mongodb').ObjectID;
 
 var router = function (nav) {
-	
-	var nave = nav;
+//	var nave = nav;
+	libroRouter.use(function(req, res, next) {
+		if(!req.user) {
+			res.redirect('/');
+		}
+		next();
+	});
 	//single
 	libroRouter.route('/:id')
 		.get(function (req, res) {
